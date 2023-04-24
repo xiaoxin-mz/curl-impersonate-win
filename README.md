@@ -1,3 +1,19 @@
+# 我加的
+
+根据下边教程编译出来的curl.exe libcurl.dll都是x64版本的，想要编译32位版本的，按照如下步骤：
+
+## 安装msys2环境
+1. Download and install MSYS2 (https://www.msys2.org/) into folder `c:\msys64\`
+2. Run MSYS2 from start menu and update packages with command: `pacman -Suy`
+3. Install additional packages: `pacman -S patch mingw-w64-i686-make mingw-w64-i686-cmake mingw-w64-i686-nasm mingw-w64-i686-gcc mingw-w64-i686-go`
+
+## build
+1. Clone this repository with --recursive attribute to get BoringSSL and Curl submodules.
+2. Run script `copy_and_patch.bat` to copy original source codes to patchable directories and patch source code.
+3. Run script `build_32.bat` to build binaries. Ready to use binaries are located within `curl\bin` folder.
+
+# 到此为止
+
 # curl-impersonate-win
 
 A special build of curl for Windows that can impersonate Chrome and Safari.
