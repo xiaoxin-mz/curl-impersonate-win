@@ -12,6 +12,11 @@
 2. Run script `copy_and_patch.bat` to copy original source codes to patchable directories and patch source code.
 3. Run script `build_32.bat` to build binaries. Ready to use binaries are located within `curl\bin` folder.
 
+## 生成lib
+lib /def:libcurl.def /out:libcurl.lib /machine:x86
+
+## 调用方式就跟正常版本一样了
+
 # 到此为止
 
 # curl-impersonate-win
